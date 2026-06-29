@@ -87,43 +87,6 @@ Books are categorised across a **rating × stock** matrix to identify strategic 
   - Pricing pattern by genre (horizontal bar chart)
   - Price range variance (dual-axis comparison)
 
-## Project Structure
-
-```
-book-market-analysis/
-├── README.md                              # This documentation
-├── requirements.txt                       # Python dependencies
-├── dashboard.png                          # Marketing intelligence dashboard (screenshot)
-│
-├── 01_Data_Collection/
-│   └── Book_Market_Scraper.ipynb         # Web scraping notebook (50 pages × 20 books/page)
-│
-├── 02_Data_Transformation/
-│   └── book_market_data_cleaning.ipynb   # Cleaning & demand analysis engineering
-│
-├── 03_Data_Files/
-│   ├── book_market_data.xlsx             # Raw scraped data (1,000 rows, 6 columns)
-│   └── book_market_clean_data.xlsx       # Production-ready dataset with demand analysis
-│
-└── 04_Dashboard/
-    └── book_market_intelligence_project.xlsm  # Interactive Excel dashboard
-                                               # (Filters, pivot tables, charts, KPIs)
-```
-
-## Installation & Setup
-
-### Prerequisites
-- Python 3.7+ (for notebooks)
-- pip
-- Excel or compatible spreadsheet application (for dashboard)
-
-### Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-This installs all required libraries for data scraping, cleaning, and analysis.
 
 ## How to Use This Intelligence
 
