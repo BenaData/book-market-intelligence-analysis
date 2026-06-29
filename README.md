@@ -75,7 +75,7 @@ Books are categorised across a **rating × stock** matrix to identify strategic 
 
 ## Marketing Intelligence Dashboard
 
-![Book Market Intelligence Dashboard](dashboard.png)
+![Book Market Intelligence Dashboard](https://github.com/BenaData/book-market-intelligence-analysis/blob/main/Dashboard.png)
 
 **Interactive Features:**
 - **Genre Filter**: Drill down by category (Womens Fiction, Music, Romance, Academic, etc.)
