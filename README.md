@@ -150,47 +150,6 @@ Books are categorised across a **rating × stock** matrix to identify strategic 
 | `book_market_clean_data.xlsx` | Production-ready dataset with strategic categories |
 | `book_market_intelligence_project.xlsm` | **Executive dashboard** — Interactive filters, charts, KPIs for decision-making |
 
-## How to Reproduce & Extend
-
-### Step 1: Set Up Environment
-```bash
-git clone https://github.com/YOUR-USERNAME/book-market-analysis.git
-cd book-market-analysis
-pip install -r requirements.txt
-```
-
-### Step 2: Run Data Pipeline
-1. **Scraping**: Open `01_Data_Collection/Book_Market_Scraper.ipynb`
-   - Scrapes 50 pages × 20 books/page = 1,000 records
-   - Output: `book_market_data.xlsx`
-
-2. **Cleaning & Feature Engineering**: Open `02_Data_Transformation/book_market_data_cleaning.ipynb`
-   - Fixes encoding issues, standardises data types
-   - Engineers `Demand Analysis` strategic categories
-   - Output: `book_market_clean_data.xlsx`
-
-### Step 3: Analyse & Visualise
-- Open `book_market_intelligence_project.xlsm` to explore interactive dashboard
-- Use genre and demand category filters to drill down into specific market segments
-- Export reports for stakeholder presentations
-
-### Extending the Analysis
-```python
-import pandas as pd
-
-df = pd.read_excel('book_market_clean_data.xlsx')
-
-# Analyse demand gaps by genre
-demand_gap_by_genre = df[df['Demand Analysis'] == 'Demand Gap'].groupby('Genre').size()
-print(demand_gap_by_genre.sort_values(ascending=False))
-
-# Calculate pricing elasticity by rating
-pricing_by_rating = df.groupby('Rating')['Price (£)'].agg(['mean', 'std', 'count'])
-print(pricing_by_rating)
-```
-
----
-
 ### Note on Dashboard File
 The `.xlsm` file contains:
 - Macro-enabled Excel workbook with interactive filters
